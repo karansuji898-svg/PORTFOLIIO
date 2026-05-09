@@ -3,6 +3,7 @@ import Introduction from '@/components/Introduction';
 import Contents from '@/components/Contents';
 import Education from '@/components/Education';
 import Gallery from '@/components/Gallery';
+import AnimatedSection from '@/components/AnimatedSection';
 import path from 'path';
 import { promises as fs } from 'fs';
 
@@ -18,11 +19,25 @@ export default async function Home() {
 
   return (
     <main>
-      <Hero data={data.hero} />
-      <Contents data={data.contents} />
-      <Introduction data={data.introduction} />
-      <Education data={data.education} />
-      <Gallery data={data.contents} />
+      <AnimatedSection>
+        <Hero data={data.hero} />
+      </AnimatedSection>
+
+      <AnimatedSection delay={0.2}>
+        <Contents data={data.contents} />
+      </AnimatedSection>
+
+      <AnimatedSection delay={0.2}>
+        <Introduction data={data.introduction} />
+      </AnimatedSection>
+
+      <AnimatedSection delay={0.2}>
+        <Education data={data.education} />
+      </AnimatedSection>
+
+      <AnimatedSection delay={0.2}>
+        <Gallery data={data.contents} />
+      </AnimatedSection>
     </main>
   );
 }
