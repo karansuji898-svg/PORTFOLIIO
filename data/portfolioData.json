@@ -1,0 +1,87 @@
+{
+  "hero": {
+    "title": "Portfolio",
+    "subtitle": "Graphic Designer Portfolio",
+    "name": "Karan Suji"
+  },
+  "contents": [
+    {
+      "title": "Posters",
+      "images": [
+        "/assets/poster_demo_1778274417881.png",
+        "https://res.cloudinary.com/dkdagnlfz/image/upload/v1778309060/1_Bt1LExwkhr0hl6ovz1oBkA_ebgw81.png"
+      ]
+    },
+    {
+      "title": "Visiting Cards",
+      "images": [
+        "/assets/visiting_card_demo_1778274466762.png",
+        "https://res.cloudinary.com/dkdagnlfz/image/upload/v1778310403/Karan_s_Portfolio_page-0010_sd3bst.jpg"
+      ]
+    },
+    {
+      "title": "Magazine Covers",
+      "images": [
+        "/assets/magazine_cover_demo_1778274672589.png"
+      ]
+    },
+    {
+      "title": "Branding Posters",
+      "images": [
+        "https://res.cloudinary.com/dkdagnlfz/image/upload/v1778310138/Karan_s_Portfolio_page-0006_au9bec.jpg",
+        "https://res.cloudinary.com/dkdagnlfz/image/upload/v1778310374/Karan_s_Portfolio_page-0013_t1oaaa.jpg"
+      ]
+    },
+    {
+      "title": "Invitation Cards",
+      "images": [
+        "https://res.cloudinary.com/dkdagnlfz/image/upload/v1778310159/Karan_s_Portfolio_page-0008_akk1bv.jpg",
+        "https://res.cloudinary.com/dkdagnlfz/image/upload/v1778310388/Karan_s_Portfolio_page-0011_as2wa2.jpg"
+      ]
+    },
+    {
+      "title": "Menu Cards",
+      "images": [
+        "https://res.cloudinary.com/dkdagnlfz/image/upload/v1778310170/Karan_s_Portfolio_page-0009_jj0knh.jpg"
+      ]
+    },
+    {
+      "title": "Website Landing Pages",
+      "images": [
+        "https://res.cloudinary.com/dkdagnlfz/image/upload/v1778310186/Karan_s_Portfolio_page-0012_oyxkv6.jpg",
+        "https://res.cloudinary.com/dkdagnlfz/image/upload/v1778310284/Karan_s_Portfolio_page-0014_af8jqb.jpg",
+        "https://res.cloudinary.com/dkdagnlfz/image/upload/v1778310322/Karan_s_Portfolio_page-0016_iimxwp.jpg"
+      ]
+    },
+    {
+      "title": "Standy",
+      "images": [
+        "https://res.cloudinary.com/dkdagnlfz/image/upload/v1778310266/Karan_s_Portfolio_page-0015_ialpgc.jpg"
+      ]
+    },
+    {
+      "title": "Pen Tool Vector",
+      "images": [
+        "https://res.cloudinary.com/dkdagnlfz/image/upload/v1778310332/Karan_s_Portfolio_page-0005_oytmkg.jpg"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "level": "10th",
+      "institution": "Kotwal National Institute of Teaching, Jammu (State Board)"
+    },
+    {
+      "level": "12th",
+      "institution": "Kotwal National Institute of Teaching, Jammu (State Board)"
+    },
+    {
+      "level": "Graduation (B.Com)",
+      "institution": "Sri Pratap Memorial Rajput College of Commerce (SPMR)"
+    }
+  ],
+  "introduction": {
+    "text": "Hi, I'm Karan Suji — a passionate graphic designer dedicated to creating visually compelling and impactful designs. I specialize in crafting clean, modern, and user-focused visuals that bring ideas to life. Whether it's branding, social media creatives, or print materials, I believe in turning concepts into captivating stories through design.",
+    "imageUrl": "https://res.cloudinary.com/dkdagnlfz/image/upload/v1778309047/1_Bt1LExwkhr0hl6ovz1oBkA_tsb3yt.png"
+  }
+}

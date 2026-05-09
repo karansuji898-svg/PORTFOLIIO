@@ -1,0 +1,77 @@
+.introSection {
+  background-color: var(--color-bg);
+}
+
+.introBox {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem;
+  background: var(--color-surface);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  flex-wrap: wrap;
+}
+
+.imageWrapper {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.imageCircle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--color-border);
+}
+
+.imageCircle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.imageCircle:hover img {
+  transform: scale(1.1);
+}
+
+.contentWrapper {
+  flex: 1.5;
+  min-width: 300px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+  letter-spacing: 0.1em;
+}
+
+.text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-weight: 300;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .introBox {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+  .imageCircle {
+    width: 250px;
+    height: 250px;
+  }
+  .heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
