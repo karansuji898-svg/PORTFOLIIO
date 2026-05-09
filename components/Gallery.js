@@ -16,12 +16,25 @@ export default function Gallery({ data }) {
               key={index} 
               id={category.title.toLowerCase().replace(/\s+/g, '-')}
               className={styles.categoryBlock}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h2 className={styles.categoryTitle}>{category.title}</h2>
+              <div className={styles.categoryHeader}>
+                <motion.h2 
+                  className={styles.categoryTitle}
+                  initial={{ x: -20, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                >
+                  {category.title}
+                </motion.h2>
+                <div className={styles.categoryLine}></div>
+                <span className={styles.categoryCount}>
+                  {category.images?.length || 0} Projects
+                </span>
+              </div>
               
               {category.images && category.images.length > 0 ? (
                 <div className={styles.imageGrid}>
@@ -30,25 +43,35 @@ export default function Gallery({ data }) {
                       key={imgIndex} 
                       className={styles.imageCard}
                       onClick={() => setSelectedImage(imgUrl)}
-                      whileHover={{ scale: 1.03 }}
-                      whileTap={{ scale: 0.97 }}
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
-                      transition={{ delay: imgIndex * 0.05 }}
+                      transition={{ 
+                        duration: 0.5, 
+                        delay: imgIndex * 0.1,
+                        ease: "easeOut"
+                      }}
+                      whileHover={{ 
+                        y: -15,
+                        rotateY: 5,
+                        rotateX: -5,
+                        transition: { duration: 0.3 }
+                      }}
                     >
                       <div className={styles.imageWrapper}>
                         <img src={imgUrl} alt={`${category.title} work ${imgIndex + 1}`} />
                       </div>
                       <div className={styles.overlay}>
-                        <span>View Full Image</span>
+                        <div className={styles.overlayContent}>
+                          <span className={styles.viewBtn}>View Project</span>
+                        </div>
                       </div>
                     </motion.div>
                   ))}
                 </div>
               ) : (
                 <div className={styles.emptyState}>
-                  More work coming soon. (Add images via Admin Panel)
+                  <p>More work coming soon.</p>
                 </div>
               )}
             </motion.div>

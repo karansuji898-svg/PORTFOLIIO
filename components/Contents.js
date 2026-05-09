@@ -62,7 +62,11 @@ export default function Contents({ data }) {
                 variants={item}
                 whileHover={{ x: 5, color: 'var(--accent-color)' }}
               >
-                <div className={styles.dot}></div>
+                <motion.div 
+                  className={styles.dot}
+                  animate={{ scale: [1, 1.5, 1], opacity: [1, 0.6, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                ></motion.div>
                 <span>{itemData.title}</span>
               </motion.a>
             ))}

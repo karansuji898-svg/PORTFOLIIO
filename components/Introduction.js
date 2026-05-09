@@ -19,12 +19,23 @@ export default function Introduction({ data }) {
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
           >
-            <div className={styles.imageCircle}>
+            <motion.div 
+              className={styles.imageCircle}
+              animate={{ 
+                y: [0, -15, 0],
+                rotate: [0, 2, -2, 0]
+              }}
+              transition={{ 
+                duration: 6, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
+              }}
+            >
               <img 
                 src={data.imageUrl || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop"} 
                 alt="Profile" 
               />
-            </div>
+            </motion.div>
           </motion.div>
           <div className={styles.contentWrapper}>
             <motion.h2 
