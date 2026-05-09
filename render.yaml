@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: portfolio
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+        fromEnvVar: NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+      - key: NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET
+        fromEnvVar: NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET
+      - key: NEXT_PUBLIC_CLOUDINARY_API_KEY
+        fromEnvVar: NEXT_PUBLIC_CLOUDINARY_API_KEY
+      - key: CLOUDINARY_API_SECRET
+        fromEnvVar: CLOUDINARY_API_SECRET
+      - key: CLOUDINARY_URL
+        fromEnvVar: CLOUDINARY_URL
