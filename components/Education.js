@@ -20,11 +20,11 @@ export default function Education({ data }) {
   };
 
   return (
-    <section className={`page-section ${styles.educationSection}`}>
+    <section id="education" className={`page-section ${styles.educationSection}`}>
       <div className="container">
         <motion.div 
-          className={`bordered-box ${styles.educationBox} hover-lift`}
-          initial={{ opacity: 0, y: 20 }}
+          className={`glass-box ${styles.educationBox} hover-lift`}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >

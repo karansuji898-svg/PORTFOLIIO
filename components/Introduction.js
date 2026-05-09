@@ -6,11 +6,11 @@ import styles from './Introduction.module.css';
 
 export default function Introduction({ data }) {
   return (
-    <section className={`page-section ${styles.introSection}`}>
+    <section id="introduction" className={`page-section ${styles.introSection}`}>
       <div className="container">
         <motion.div 
-          className={`bordered-box ${styles.introBox} hover-lift`}
-          whileHover={{ y: -5 }}
+          className={`glass-box ${styles.introBox} hover-lift`}
+          whileHover={{ y: -8 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
           <motion.div 

@@ -8,12 +8,13 @@ export default function Gallery({ data }) {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section className={`page-section ${styles.gallerySection}`}>
+    <section id="gallery" className={`page-section ${styles.gallerySection}`}>
       <div className="container">
         <div className={styles.galleryContainer}>
           {data.map((category, index) => (
             <motion.div 
               key={index} 
+              id={category.title.toLowerCase().replace(/\s+/g, '-')}
               className={styles.categoryBlock}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

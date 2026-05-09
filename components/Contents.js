@@ -20,15 +20,15 @@ export default function Contents({ data }) {
   };
 
   return (
-    <section className={`page-section ${styles.contentsSection}`}>
-      <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+    <section id="contents" className={`page-section ${styles.contentsSection}`}>
+      <div className="container">
         <motion.div 
-          className={`bordered-box ${styles.contentsBox} hover-lift`}
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          className={`glass-box ${styles.contentsBox} hover-lift`}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className={styles.heading}>Contents</h2>
+          <h2 className={styles.heading}>Table of Contents</h2>
           <motion.div 
             className={styles.grid}
             variants={container}
@@ -36,11 +36,35 @@ export default function Contents({ data }) {
             whileInView="show"
             viewport={{ once: true }}
           >
+            <motion.a 
+              href="#introduction"
+              className={styles.item} 
+              variants={item}
+              whileHover={{ x: 5, color: 'var(--accent-color)' }}
+            >
+              <div className={styles.dot}></div>
+              <span>Introduction</span>
+            </motion.a>
+            <motion.a 
+              href="#education"
+              className={styles.item} 
+              variants={item}
+              whileHover={{ x: 5, color: 'var(--accent-color)' }}
+            >
+              <div className={styles.dot}></div>
+              <span>Education</span>
+            </motion.a>
             {data.map((itemData, index) => (
-              <motion.div key={index} className={styles.item} variants={item}>
+              <motion.a 
+                key={index} 
+                href={`#${itemData.title.toLowerCase().replace(/\s+/g, '-')}`}
+                className={styles.item} 
+                variants={item}
+                whileHover={{ x: 5, color: 'var(--accent-color)' }}
+              >
                 <div className={styles.dot}></div>
                 <span>{itemData.title}</span>
-              </motion.div>
+              </motion.a>
             ))}
           </motion.div>
         </motion.div>
