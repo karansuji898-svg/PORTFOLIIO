@@ -11,12 +11,12 @@ services:
       - key: ADMIN_PASSWORD
         sync: false
       - key: NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
-        fromEnvVar: NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+        sync: false
       - key: NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET
-        fromEnvVar: NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET
+        sync: false
       - key: NEXT_PUBLIC_CLOUDINARY_API_KEY
-        fromEnvVar: NEXT_PUBLIC_CLOUDINARY_API_KEY
+        sync: false
       - key: CLOUDINARY_API_SECRET
-        fromEnvVar: CLOUDINARY_API_SECRET
+        sync: false
       - key: CLOUDINARY_URL
-        fromEnvVar: CLOUDINARY_URL
+        sync: false
